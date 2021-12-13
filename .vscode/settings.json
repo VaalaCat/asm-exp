@@ -1,1 +1,7 @@
-{}
+{
+	"files.associations": {
+		"*.py": "python",
+		"*.tpl": "conf",
+		"stdio.h": "c"
+	}
+}
