@@ -91,7 +91,7 @@ START: ; 首先初始化程序和栈空间
 	MOV SP,20H
 	MOV BP,SP
 	SUB SP,10H
-		; 以下是输入，省略
+	; 以下是输入，省略
 	; MOV DX,OFFSET MIN
 	; MOV AH,09H
 	; INT 21H
@@ -118,8 +118,8 @@ START: ; 首先初始化程序和栈空间
 	; CALL ASCII2NUM
 	; MOV INPUTMAX,AX
 
-	MOV CX,0DCH
-	JMP FORIF
+	MOV CX,0DCH ; CX从220开始
+	JMP FORIF ; 循环开始直接跳转到判断
 
 LOOP0:
 	CMP CX,0
