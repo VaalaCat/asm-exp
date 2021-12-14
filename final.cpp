@@ -63,7 +63,7 @@ int main(){
 			for (i_low=min_low;i_low<=max_low;i_low++){
 				arg_high=i_high;
 				arg_low=i_low;
-				getsum();~~
+				getsum();
 				tmp_high=sum_high;
 				tmp_low=sum_low;
 				arg_high=tmp_high;
