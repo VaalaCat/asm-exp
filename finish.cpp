@@ -1,5 +1,3 @@
-#include<iostream>
-using namespace std;
 unsigned int min_low,max_low;
 unsigned int min_high,max_high;
 
@@ -14,17 +12,17 @@ unsigned int arg_high,arg_low;
 
 unsigned int output_high,output_low;
 
+unsigned int tag;
+
 void getsum(){
 	sum_high=0;sum_low=0;
 	for (i1_high=0;i1_high<=arg_high;i1_high++){
 		if (i1_high == arg_high){
 			for (i1_low=0;i1_low<=arg_low;i1_low++){
-				unsigned int tmp1=(arg_high<<16)+arg_low;
-				unsigned int tmp2=(i1_high<<16)+i1_low;
 				if (i1_high==arg_high && i1_low==arg_low){
 					return;
 				}
-				if (tmp1 % tmp2==0){ // 伪代码
+				if (tag){ // 伪代码
 					sum_low=sum_low+i1_low;
 					unsigned int tmp3=(sum_low>>16);
 					sum_low-=(tmp3<<16);
@@ -34,12 +32,10 @@ void getsum(){
 		}
 		else{
 			for (i1_low=0;i1_low<=0xffff;i1_low++){
-				unsigned int tmp1=(arg_high<<16)+arg_low;
-				unsigned int tmp2=(i1_high<<16)+i1_low;
 				if (i1_high==arg_high && i1_low==arg_low){
 					return;
 				}
-				if (tmp1 % tmp2==0){ // 伪代码
+				if (tag){ // 伪代码
 					sum_low=sum_low+i1_low;
 					unsigned int tmp3=(sum_low>>16);
 					sum_low-=(tmp3<<16);
@@ -84,7 +80,6 @@ int main(){
 					}					
 					output_high=tmp_high;
 					output_low=tmp_low;
-					printf("%u-%u\n",(i_high<<16)+i_low, (tmp_high<<16)+tmp_low);
 				}
 			}
 			break;
@@ -113,7 +108,6 @@ int main(){
 					}					
 					output_high=tmp_high;
 					output_low=tmp_low;
-					printf("%u-%u\n",(i_high<<16)+i_low, (tmp_high<<16)+tmp_low);
 				}
 			}
 			continue;
@@ -142,7 +136,6 @@ int main(){
 					}					
 					output_high=tmp_high;
 					output_low=tmp_low;
-					printf("%u-%u\n",(i_high<<16)+i_low, (tmp_high<<16)+tmp_low);
 				}
 			}
 			continue;
@@ -171,7 +164,6 @@ int main(){
 					}					
 					output_high=tmp_high;
 					output_low=tmp_low;
-					printf("%u-%u\n",(i_high<<16)+i_low, (tmp_high<<16)+tmp_low);
 				}
 			}
 			continue;
