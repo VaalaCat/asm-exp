@@ -52,10 +52,10 @@ void getsum(){
 }
 
 int main(){
-	min_low = 0x00da;
+	min_low = 0x00dc;
 	min_high = 0x0000;
 	max_low = 0x0000;
-	max_high = 0x0002;
+	max_high = 0x0011;
 	arg_high = 0x0000;
 	arg_low = 0x0000;
 	for (i_high=min_high;i_high<=max_high;i_high++){
@@ -63,7 +63,7 @@ int main(){
 			for (i_low=min_low;i_low<=max_low;i_low++){
 				arg_high=i_high;
 				arg_low=i_low;
-				getsum();
+				getsum();~~
 				tmp_high=sum_high;
 				tmp_low=sum_low;
 				arg_high=tmp_high;
@@ -72,7 +72,7 @@ int main(){
 				if (i_high==sum_high && i_low==sum_low){
 					output_high=tmp_high;
 					output_low=tmp_low;
-					printf("%x%x-%x%x\n",i_high,i_low,tmp_high,tmp_low);
+					printf("%.4x%.4x-%.4x%.4x\n",i_high,i_low,tmp_high,tmp_low);
 				}
 			}
 			break;
@@ -87,10 +87,10 @@ int main(){
 				arg_high=tmp_high;
 				arg_low=tmp_low;
 				getsum();
-				if (tmp_high==sum_high && tmp_low==sum_low&& (tmp_high!=0&&tmp_low!=0)){
+				if (i_high==sum_high && i_low==sum_low){
 					output_high=tmp_high;
 					output_low=tmp_low;
-					printf("%x-%x",output_high,output_low);
+					printf("%.4x%.4x-%.4x%.4x\n",i_high,i_low,tmp_high,tmp_low);
 				}
 			}
 			continue;
@@ -105,10 +105,10 @@ int main(){
 				arg_high=tmp_high;
 				arg_low=tmp_low;
 				getsum();
-				if (tmp_high==sum_high && tmp_low==sum_low&& (tmp_high!=0&&tmp_low!=0)){
+				if (i_high==sum_high && i_low==sum_low){
 					output_high=tmp_high;
 					output_low=tmp_low;
-					printf("%x-%x",output_high,output_low);
+					printf("%.4x%.4x-%.4x%.4x\n",i_high,i_low,tmp_high,tmp_low);
 				}
 			}
 			continue;
@@ -123,10 +123,10 @@ int main(){
 				arg_high=tmp_high;
 				arg_low=tmp_low;
 				getsum();
-				if (tmp_high==sum_high && tmp_low==sum_low&& (tmp_high!=0&&tmp_low!=0)){
+				if (i_high==sum_high && i_low==sum_low){
 					output_high=tmp_high;
 					output_low=tmp_low;
-					printf("%x-%x",output_high,output_low);
+					printf("%.4x%.4x-%.4x%.4x\n",i_high,i_low,tmp_high,tmp_low);
 				}
 			}
 			continue;
