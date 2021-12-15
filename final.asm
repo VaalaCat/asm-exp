@@ -173,7 +173,7 @@ START:
                 ; MOV     WORD PTR MAX_LOW, 2227H
                 ; MOV     WORD PTR MAX_HIGH, 002H
 				MOV     WORD PTR MIN_LOW, 00DAH
-                MOV     WORD PTR MIN_HIGH, 0001H
+                MOV     WORD PTR MIN_HIGH, 0000H
                 MOV     WORD PTR MAX_LOW, 2227H
                 MOV     WORD PTR MAX_HIGH, 002H
                 MOV     WORD PTR ARG_LOW, 00H
