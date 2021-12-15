@@ -168,10 +168,14 @@ start:
                 mov     ax,datasg
                 mov     ds,ax
                 
-                mov     word ptr min_low, 047dch
-                mov     word ptr min_high, 004h
-                mov     word ptr max_low, 0000h
-                mov     word ptr max_high, 0022h
+                ; mov     word ptr min_low, 8885h
+                ; mov     word ptr min_high, 0001h
+                ; mov     word ptr max_low, 2227h
+                ; mov     word ptr max_high, 002h
+				mov     word ptr min_low, 00dah
+                mov     word ptr min_high, 0001h
+                mov     word ptr max_low, 2227h
+                mov     word ptr max_high, 002h
                 mov     word ptr arg_low, 00h
                 mov     word ptr arg_high, 00h
 
