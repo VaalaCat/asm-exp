@@ -168,14 +168,14 @@ START:
                 MOV     AX,DATASG
                 MOV     DS,AX
                 
-                ; MOV     WORD PTR MIN_LOW, 8885H
-                ; MOV     WORD PTR MIN_HIGH, 0001H
-                ; MOV     WORD PTR MAX_LOW, 2227H
-                ; MOV     WORD PTR MAX_HIGH, 002H
-				MOV     WORD PTR MIN_LOW, 00DAH
-                MOV     WORD PTR MIN_HIGH, 0000H
+                MOV     WORD PTR MIN_LOW, 8885H
+                MOV     WORD PTR MIN_HIGH, 0001H
                 MOV     WORD PTR MAX_LOW, 2227H
                 MOV     WORD PTR MAX_HIGH, 002H
+				; MOV     WORD PTR MIN_LOW, 00DAH
+                ; MOV     WORD PTR MIN_HIGH, 0000H
+                ; MOV     WORD PTR MAX_LOW, 2227H
+                ; MOV     WORD PTR MAX_HIGH, 002H
                 MOV     WORD PTR ARG_LOW, 00H
                 MOV     WORD PTR ARG_HIGH, 00H
 

@@ -1,5 +1,3 @@
-#include<iostream>
-using namespace std;
 unsigned int min_low,max_low;
 unsigned int min_high,max_high;
 
@@ -60,7 +58,7 @@ int main(){
 	arg_low = 0x0000;
 	for (i_high=min_high;i_high<=max_high;i_high++){
 		if (i_high==min_high && min_high==max_high){
-			for (i_low=min_low;i_low<=max_low;i_low++){
+			for (i_low=min_low;i_low<=max_low;i_low++){// 伪代码
 				arg_high=i_high;
 				arg_low=i_low;
 				getsum();
